@@ -1,0 +1,31 @@
+{
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-less": "^3.5.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-notify": "^3.0.0"
+  },
+  "name": "polygonator",
+  "description": "link: https://bitbucket.org/mihail_m/lmc_site",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "gulp-minify-css": "^1.2.4",
+    "gulp-notify": "^3.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://stelmakh-oleg@bitbucket.org/mihail_m/lmc_site.git"
+  },
+  "author": "Oleg Stelmakh",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "https://bitbucket.org/mihail_m/lmc_site/src/master/README.md"
+}

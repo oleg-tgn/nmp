@@ -1,0 +1,277 @@
+@import "vars.less";
+
+.header {
+	width: 100%;	
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+
+	@media @desktop {
+		padding: 7rem 6rem;
+	}
+
+	@media @small-desktops, @medium-desktops {
+        padding: 4rem 6rem;
+    }
+
+    @media @tablet {
+    	padding: 2rem 2.5rem;
+    }
+
+    @media @mobile {
+		padding: 2rem;
+    }
+
+
+	img {
+		width: 100%;
+	}
+
+	
+
+	.header__burger-img,
+    .logo__image,
+    .header-nav__basket-image,
+    .header-nav__search-image,
+    .header-nav__user-image,
+    .header-nav__lang-image {
+    	display: inline-block;
+    }
+
+    .header__burger-img_dark,
+    .logo__image_dark,
+    .header-nav__basket-image_dark,
+    .header-nav__search-image_dark,
+    .header-nav__user-image_dark,
+    .header-nav__lang-image_dark, {
+    	display: none;
+    }
+
+    &.fixed {
+    	.header__burger-img,
+	    .logo__image,
+	    .header-nav__basket-image,
+	    .header-nav__search-image,
+	    .header-nav__user-image,
+	    .header-nav__lang-image {
+	    	display: none;
+	    }
+
+	    .header__burger-img_dark,
+	    .logo__image_dark,
+	    .header-nav__basket-image_dark,
+	    .header-nav__search-image_dark,
+	    .header-nav__user-image_dark,
+	    .header-nav__lang-image_dark, {
+	    	display: inline-block;
+	    }
+
+	    .header-nav__user-label {
+    	    color: #181818;
+	    }
+    }
+
+
+	&__burger {
+		@media @desktop {
+			width: 4rem;
+		}
+
+		@media @tablet {
+			width: 3rem;
+		}
+
+		@media @mobile {
+			width: 2.5rem;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&__burger-img {
+		width: 100%;
+		display: none;
+	}
+
+	&.fixed {
+		position: fixed;
+		background: rgba(255, 255, 255, 0.5);
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+	}
+}
+
+
+.logo {
+	@media @desktop {
+		width: 16rem;
+		position: absolute;
+    	left: 50%;
+    	transform: translateX(-50%);
+	}
+	
+	@media @small-desktops, @medium-desktops {
+        left: 40%; 
+    }
+
+    @media @tablet {
+    	width: 10rem;
+    }
+
+	@media @mobile {
+		width: 7.5rem;
+	}	
+
+	&__image {
+		width: 100%;
+	}
+}
+
+.header-nav {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	&__market {
+		background-color:  #f2364d;
+		display: inline-block;
+		border-radius: 2.5rem;
+		padding: 0 3rem;
+		color:  #fefefe;
+		font-weight: 600;
+
+		@media @desktop {
+			line-height: 5rem;
+			font-size: 1.8rem;
+			margin-right: 5rem;
+		}
+
+		@media @tablet, @mobile {
+			line-height: 3.6rem;
+			border-radius: 1.8rem;
+			padding: 0 1.5rem;
+			font-size: 1.2rem;
+		}
+
+		@media @tablet {
+			margin-right: 2.5rem;
+		}
+
+		@media @mobile {
+			margin-right: 0;
+		}
+	}
+
+	&__basket {
+		width: 3.3rem;
+		margin-right: 3rem;
+
+		@media @tablet {
+			width: 2.5rem;
+			margin-right: 2rem;
+		}
+
+		@media @mobile {
+			display: none;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&__search {
+		width: 3rem;
+		margin-right: 3rem;		
+
+		@media @tablet {
+			width: 2rem;
+			margin-right: 2rem;
+		}
+
+		@media @mobile {
+			display: none;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&__user {
+		color:  #fefefe;
+		font-size: 1.6rem;
+		font-weight: 300;
+		line-height: 1.5rem;
+		margin-right: 3rem;
+		display: flex;
+		align-items: center;
+
+		@media @tablet {
+			margin-left: 2rem;
+		}
+
+		@media @mobile {
+			display: none;
+		}
+	}
+
+	&__user-label {
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: 1.8rem;
+
+		@media @tablet {
+			margin-left: 0;
+		}
+
+		&.dark {
+			color: #181818;
+		}
+	}
+
+	&__user-image {
+		width: 1.8rem;
+	    vertical-align: middle;
+	    margin-right: 1.8rem;
+
+	    @media @tablet {
+			width: 1.4rem;
+			margin-right: 1rem;
+		}
+	}
+
+	&__user-image_dark {
+		@media @tablet {
+			width: 1.4rem;
+			margin-right: 1rem;
+		}
+	}
+
+	&__lang {
+		@media @desktop {
+			width: 4.8rem;
+		}
+
+		@media @tablet {
+			width: 4rem;
+		}	
+
+		@media @mobile {
+			display: none;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+}
