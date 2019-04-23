@@ -14,7 +14,7 @@
 <body>
 <header class="header">  
     <div class="header__burger">
-        <a class="header__burger-link">
+        <a href="#menu" class="header__burger-link js-menu-popup">
             <img src="img/icons/burger.svg" class="header__burger-img ">
             <img src="img/burger_dark.png" class="header__burger-img_dark icons-hidden">
         </a>
@@ -25,7 +25,7 @@
             <img class="logo__image_dark" src="img/logo_dark.png">
         </a>
     </div>
-    <div class="header-nav">
+    <div class="header-nav hide-on-mobile">
         <a href="#" class="header-nav__market">ИНТЕРНЕТ-МАГАЗИН</a>
         <a href="#" class="header-nav__basket">
             <img class="header-nav__basket-image" src="img/icons/basket.png">
@@ -46,8 +46,8 @@
 </header>
 <section class="content">
    <div class="banner">
-        <div class="banner__video-wrap">            
-            <video class="banner__video" poster="img/banners/home-top.jpg" autoplay="autoplay" loop="loop" muted="muted">
+        <div class="banner__video-wrap">       
+            <video class="banner__video" autoplay="autoplay" loop="loop" muted="muted">
                 <source src="video/nmp.mp4" type="video/mp4">
             </video>
         </div> 
@@ -98,15 +98,9 @@
    <div class="product product_right-content">
         <div class="product__container">
             <div class="product__image-wrap product__image-wrap_left">
-                <video class="product__video js-video" poster="img/titan.jpg" preload="preload" muted="muted">
-                 <!-- onclick="this.play(); $('.js-play').hide()" onended="$('.js-play').show()"> -->
+                <video class="product__video js-video" poster="img/titan-video-poster.png" preload="preload" muted="muted">
                     <source src="video/titan.mp4" type="video/mp4">                    
                 </video>
-                <!-- <span class="icon-play3 js-play" onclick="$('.js-video').get(0).play(); $('.js-play').hide()"></span>
-
-                <script>
-                    
-                </script> -->
             </div> 
             <div class="product__info product__info_center">
                 <div class="product__description js-animate">
@@ -158,19 +152,19 @@
     <div class="footer__container">
         <div class="footer__column footer__column_contact">
            <a href="#contact" class="footer__button js-contact-popup"><img src="img/letter.png"> НАПИШИТЕ НАМ</a> 
-           <p class="footer__address">Акционерное общество „Нева&nbsp;Металл&nbsp;Посуда“<br><br>195067, Санкт-Петербург, пр. Маршала Блюхера, д. 78, лит. Н</p>
+           <p class="footer__address">Акционерное общество „Нева&nbsp;Металл&nbsp;Посуда“<br><br>195067, Санкт-Петербург, пр.&nbsp;Маршала&nbsp;Блюхера, д.&nbsp;78, лит.&nbsp;Н</p>
            <a href="#" class="footer__phone">8 (800) 222-80-32</a>
            <p class="footer__phone-label">Единый бесплатный номер службы поддержки АО "НМП"</p>
         </div>
         <div class="footer__column">
             <div class="footer__title">Интернет-магазин</div>
             <ul class="footer__menu">
+                <li class="footer__menu-item"><a href="#" class="footer__menu-link">Каталог</a></li>
                 <li class="footer__menu-item"><a href="#" class="footer__menu-link">Оплата</a></li>
                 <li class="footer__menu-item"><a href="#" class="footer__menu-link">Доставка</a></li>
                 <li class="footer__menu-item"><a href="#" class="footer__menu-link">Обмен и возврат</a></li>
-                <li class="footer__menu-item"><a href="#" class="footer__menu-link">Оферта</a></li>
+                <li class="footer__menu-item"><a href="#" class="footer__menu-link">Политика обработки<br> персональных данных</a></li>
                 <li class="footer__menu-item"><a href="#" class="footer__menu-link">Карта сайта</a></li>
-                <li class="footer__menu-item"><a href="#" class="footer__menu-link">О компании</a></li>
             </ul>
         </div>
         <div class="footer__column">
@@ -178,23 +172,204 @@
             <ul class="footer__menu">
                 <li class="footer__menu-item"><a href="#" class="footer__menu-link">Производство</a></li>
                 <li class="footer__menu-item"><a href="#" class="footer__menu-link">Ваша посуда</a></li>
-                <li class="footer__menu-item"><a href="#" class="footer__menu-link">Новости</a></li>
             </ul>
-        </div>
-        <div class="footer__social-wrap">
-               <a class="footer__logo">
-                   <img class="footer__logo-image" src="img/logo_footer.png">
-               </a>
-               <ul class="footer__social">
+            <div class="footer__title footer__title_social">Соцсети</div>
+            <ul class="footer__social">
                    <li class="footer__social-item"><a href="#" class="footer__social-link"><img class="footer__social-image" src="img/vk.png"></a></li>
                    <li class="footer__social-item"><a href="#" class="footer__social-link"><img class="footer__social-image" src="img/inst.png"></a></li>
                    <li class="footer__social-item"><a href="#" class="footer__social-link"><img class="footer__social-image" src="img/fb.png"></a></li>
                    <li class="footer__social-item"><a href="#" class="footer__social-link"><img class="footer__social-image" src="img/youtube.png"></a></li>
                </ul>
-           </div>
+        </div>
+
+        <div class="footer__column">
+            <div class="footer__title">О нас</div>
+            <ul class="footer__menu">
+                <li class="footer__menu-item"><a href="#" class="footer__menu-link">О компании</a></li>
+                <li class="footer__menu-item"><a href="#" class="footer__menu-link">Новости</a></li>
+                <li class="footer__menu-item"><a href="#" class="footer__menu-link">Контакты</a></li>
+            </ul>
+        </div>
     </div>
 </footer>
 
+<div id="menu-content" class="menu-popup"  style="display: none;">
+    <div class="menu-popup__desktop">
+        <div class="menu-popup__wrap">    
+            <ul class="menu-popup__links"> 
+                <li><a href="#submenu-home" class="menu-popup__link active js-open-submenu">ГЛАВНАЯ</a></li>
+                <li><a href="#main" class="menu-popup__link js-open-submenu">О КОМПАНИИ</a></li>
+                <li><a href="#submenu-production" class="menu-popup__link js-open-submenu">О ПРОДУКЦИИ</a></li>
+                <li><a href="#main" class="menu-popup__link js-open-submenu">НОВОСТИ</a></li>
+            </ul>
+            <div class="header-nav">
+                <a href="#submenu-market" class="header-nav__market header-nav__market_light js-open-submenu">ИНТЕРНЕТ-МАГАЗИН</a>
+                <a href="#" class="header-nav__basket">
+                    <img class="header-nav__basket-image_dark" src="img/basket_dark.png">
+                </a>
+                <a href="#" class="header-nav__search">
+                    <img class="header-nav__search-image_dark" src="img/search_dark.png">
+                </a>
+                <a href="#" class="header-nav__user">
+                    <img class="header-nav__user-image_dark icons-hidden" src="img/user_dark.png"> <span class="header-nav__user-label">Войти</span>
+                </a>
+                <a href="#" class="header-nav__lang">
+                    <img class="header-nav__lang-image_dark" src="img/lang_dark.png">
+                </a>
+            </div>
+        </div><!-- .menu-popup__wrap -->
+
+        <hr>
+
+        <div class="menu-popup__submenu" id="submenu-home" style="display:none">
+            <ul class="menu-popup__submenu-list">
+                <li class="menu-popup__submenu-item">
+                    <img src="img/submenu/ferra.png">
+                    <span>ФЕРРА ИНДУКЦИЯ</span>
+                </li>
+                <li class="menu-popup__submenu-item">
+                    <img src="img/submenu/mineral.png">
+                    <span>ПРИРОДНЫЕ МИНЕРАЛЫ</span>
+                </li>
+                <li class="menu-popup__submenu-item">
+                    <img src="img/submenu/titan.png">
+                    <span>ТИТАН</span>
+                </li>
+                <li class="menu-popup__submenu-item">
+                    <img src="img/submenu/litay.png">
+                    <span>ЛИТАЯ</span>
+                </li>
+                <li class="menu-popup__submenu-item">
+                    <img src="img/submenu/almaz.png">
+                    <span>АЛМАЗ</span>
+                </li>
+            </ul>
+        </div><!-- #submenu-home -->
+
+        <div class="menu-popup__submenu" id="submenu-production" style="display:none">
+            <div class="menu-production">    
+                <h2 class="menu-production__title">ПРОИЗВОДСТВО</h2>
+                <h3 class="menu-production__subtitle">ВАША ПОСУДА</h3>
+                <ul class="menu-production__links">
+                    <li>
+                        <a href="#" class="menu-production__link">Инструкция для коллекции посуды из нержавеющей стали "Алмаз"
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-production__link">Инструкция для серии "Литая"</a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-production__link">Инструкция для серий "Титан", "Титан II", "Ферра индукуция"</a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-production__link">Инструкция для серии "Природные минералы"</a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-production__link">Инструкция для серии "Жемчуг"</a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-production__link">Инструкция для коллекции посуды PROF MASTER</a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-production__link">Инструкция для коллекции посуды SAFFRAN</a>
+                    </li>
+                </ul><!-- .menu-production__links -->
+                <h3 class="menu-production__subtitle">Узнайте больше о вашей посуде</h3>
+                <p class="menu-production__promo-label">Введите серийный номер и узнайте все о вашей посуде:</p>
+                <form class="menu-production__promo-form">
+                    <input type="" name="" class="menu-production__promo-input">
+                    <button class="menu-production__promo-button">Узнать</button>
+                </form>
+            </div> 
+        </div><!-- #production -->
+
+        <div class="menu-popup__submenu" id="submenu-market" style="display:none">
+            <div class="menu-production">    
+                <ul class="menu-production__links">
+                    <li>
+                        <a href="#" class="menu-production__link menu-production__link_market">Каталог
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-production__link menu-production__link_market">Оферта</a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-production__link menu-production__link_market">Оплата</a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-production__link menu-production__link_market">Доставка</a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-production__link menu-production__link_market">ОБМЕН И ВОЗВРАТ</a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-production__link menu-production__link_market">ПОЛИТИКА ОБРАБОТКИ ПЕРСОНАЛЬНЫХ ДАННЫХ</a>
+                    </li>
+                </ul><!-- .menu-production__links -->
+            </div> 
+        </div><!-- #submenu-market -->
+    </div><!-- .menu-popup__desktop -->
+
+    <div class="menu-popup__mobile">
+        <div class="header-nav">
+            <a href="#" class="header-nav__search">
+                <img class="header-nav__search-image_dark" src="img/search_dark.png">
+            </a>
+            <a href="#" class="header-nav__user">
+                <img class="header-nav__user-image_dark icons-hidden" src="img/user_dark.png"> <span class="header-nav__user-label">Войти</span>
+            </a>
+            <a href="#" class="header-nav__lang">
+                <img class="header-nav__lang-image_dark" src="img/lang_dark.png">
+            </a>
+        </div>
+        <ul class="menu-popup__links" id="menu-links"> 
+            <li><a href="#submenu-home-mobile" class="menu-popup__link menu-popup__link_more js-open-submenu-mobile">ГЛАВНАЯ</a></li>
+            <li><a href="#" class="menu-popup__link js-open-submenu">О КОМПАНИИ</a></li>
+            <li><a href="#submenu-production" class="menu-popup__link menu-popup__link_more js-open-submenu-mobile">О ПРОДУКЦИИ</a></li>
+            <li><a href="#" class="menu-popup__link js-open-submenu">НОВОСТИ</a></li>
+            <li><a href="#" class="menu-popup__link js-open-submenu">КОНТАКТЫ</a></li>
+            <li><a href="#" class="menu-popup__link menu-popup__link_more js-open-submenu-mobile">ИНТЕРНЕТ-МАГАЗИН</a></li>
+        </ul>
+
+        <div class="menu-popup__submenu" id="submenu-home-mobile" style="display:none">
+            <a href="#menu-links" class="menu-popup__submenu-title-mobile js-close-submenu">ГЛАВНАЯ</a>
+            <ul class="menu-popup__submenu-list">
+                <li class="menu-popup__submenu-item">
+                    <img src="img/submenu/ferra.png">
+                    <span>ФЕРРА ИНДУКЦИЯ</span>
+                </li>
+                <li class="menu-popup__submenu-item">
+                    <img src="img/submenu/mineral.png">
+                    <span>ПРИРОДНЫЕ МИНЕРАЛЫ</span>
+                </li>
+                <li class="menu-popup__submenu-item">
+                    <img src="img/submenu/titan.png">
+                    <span>ТИТАН</span>
+                </li>
+                <li class="menu-popup__submenu-item">
+                    <img src="img/submenu/litay.png">
+                    <span>ЛИТАЯ</span>
+                </li>
+                <li class="menu-popup__submenu-item">
+                    <img src="img/submenu/almaz.png">
+                    <span>АЛМАЗ</span>
+                </li>
+            </ul>
+        </div><!-- #submenu-home -->
+
+
+        <div class="menu-popup__basket-wrap-mobile">    
+            <a href="#" class="header-nav__basket">
+                <img class="header-nav__basket-image_dark" src="img/basket_dark.png">
+                <div class="header-nav__basket-text">             
+                    <span class="header-nav__basket-count">Товаров 2</span>
+                    <span class="header-nav__basket-price">5566 р.</span>
+                </div>   
+            </a>
+            <a href="#" class="header-nav__market">ОФОРМИТЬ ЗАКАЗ</a>
+        </div>
+    </div>
+</div>
 
 <div style="display: none;" id="hidden-content" class="contact-popup">
     <div class="contact-popup__wrap">    

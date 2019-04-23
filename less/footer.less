@@ -9,7 +9,7 @@
 
     &__container {
         width: 100%;
-        max-width: 150rem;
+        max-width: 160rem;
         margin: 0 auto;
         display: flex; 
        
@@ -27,7 +27,7 @@
     }
 
     &__column {
-        width: 25%;
+        width: 20%;
 
         @media @desktop {
              padding: 0 5rem;
@@ -44,7 +44,7 @@
 
         &_contact { 
             @media @desktop, @tablet {
-                width: 50%; 
+                width: 40%; 
             }
 
             @media @mobile {
@@ -118,20 +118,13 @@
         flex-direction: row;
         align-items: center;
 
-        @media @desktop, @tablet {
-            margin-left: 5rem;
-        }
-
         @media @mobile {
             width: 100%;
-            justify-content: space-around;
         }
     }
 
-    &__social-item {
-        @media @desktop, @tablet {
-            margin-left: 3.2rem;
-        }
+    &__social-item {        
+        margin-right: 3.2rem;
     }
 
     &__title {
@@ -141,6 +134,16 @@
         color: #f3364c;
         margin-bottom: 3rem;
         letter-spacing: .07px;
+
+        &_social {
+            @media @tablet, @desktop {
+                margin-top: 10rem;
+            }
+
+            @media @mobile {
+                margin-top: 4rem;
+            }
+        }
     }
 
     &__menu {

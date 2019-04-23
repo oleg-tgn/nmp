@@ -14,12 +14,8 @@
 	align-items: center;
 
 	@media @desktop {
-		padding: 7rem 6rem;
+		padding: 3rem 6rem;
 	}
-
-	@media @small-desktops, @medium-desktops {
-        padding: 4rem 6rem;
-    }
 
     @media @tablet {
     	padding: 2rem 2.5rem;
@@ -29,12 +25,10 @@
 		padding: 2rem;
     }
 
-
 	img {
 		width: 100%;
 	}
 
-	
 
 	.header__burger-img,
     .logo__image,
@@ -105,8 +99,6 @@
 	&.fixed {
 		position: fixed;
 		background: rgba(255, 255, 255, 0.5);
-		padding-top: 2rem;
-		padding-bottom: 2rem;
 	}
 }
 
@@ -141,6 +133,15 @@
 	flex-direction: row;
 	align-items: center;
 
+	@media @mobile {
+	    width: 100%;
+        justify-content: flex-end;
+        align-items: center;
+    	padding: 2.4rem 2rem;
+    	border-bottom: .2rem solid #e6e6e6;
+    	font-size: 0;
+	}
+
 	&__market {
 		background-color:  #f2364d;
 		display: inline-block;
@@ -148,6 +149,19 @@
 		padding: 0 3rem;
 		color:  #fefefe;
 		font-weight: 600;
+
+		&_light {
+			background-color:  transparent;
+			border: 2px solid #989898;
+			color: #f3364c;
+
+			&:hover,
+			&.active {
+				background-color:  #f2364d;
+				border: 2px solid #f2364d;
+				color:  #fefefe;
+			}
+		}
 
 		@media @desktop {
 			line-height: 5rem;
@@ -172,8 +186,10 @@
 	}
 
 	&__basket {
-		width: 3.3rem;
-		margin-right: 3rem;
+		@media @desktop {
+			width: 3.3rem;
+			margin-right: 3rem;
+		}
 
 		@media @tablet {
 			width: 2.5rem;
@@ -181,13 +197,44 @@
 		}
 
 		@media @mobile {
-			display: none;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
 		}
 
 		img {
 			width: 100%;
+
+			@media @mobile {
+				width: 2.2rem;
+				height: auto;
+			}
 		}
 	}
+
+	&__basket-text {
+		display: block;
+		margin-left: 2rem;
+	}
+
+	&__basket-count {
+        display: block;
+        color: #181818;
+        font-size: 1.2rem;
+        font-weight: 300;
+        line-height: 1.4;
+        letter-spacing: 0.83px;
+    }
+
+    &__basket-price {  
+        display: block;
+        color: #181818;
+        font-family: Montserrat;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 1.4;
+        letter-spacing: 0.83px;
+    }
 
 	&__search {
 		width: 3rem;
@@ -199,7 +246,8 @@
 		}
 
 		@media @mobile {
-			display: none;
+			width: 1.8rem;
+			margin-right: 3rem;
 		}
 
 		img {
@@ -219,10 +267,6 @@
 		@media @tablet {
 			margin-left: 2rem;
 		}
-
-		@media @mobile {
-			display: none;
-		}
 	}
 
 	&__user-label {
@@ -231,6 +275,12 @@
 		margin-left: 1.8rem;
 
 		@media @tablet {
+			margin-left: 0;
+		}
+
+		@media @mobile {
+			color: #181818;
+			font-size: 1.1rem;
 			margin-left: 0;
 		}
 
@@ -255,6 +305,11 @@
 			width: 1.4rem;
 			margin-right: 1rem;
 		}
+
+		@media @mobile {
+			width: 1.1rem;
+			margin-right: 1rem;
+		}
 	}
 
 	&__lang {
@@ -267,7 +322,7 @@
 		}	
 
 		@media @mobile {
-			display: none;
+			width: 2.8rem;
 		}
 
 		img {

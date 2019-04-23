@@ -10,6 +10,41 @@ $('.js-contact-popup').fancybox({
   }
 });
 
+$('.js-open-submenu').bind('mouseover', function() {
+    $submenu = $($(this).attr('href'));
+    
+    if ($submenu.length == 0) {
+        //$('.js-open-submenu').removeClass('active');
+        $('.menu-popup__submenu').fadeOut();
+    }
+
+    if ($submenu.css('display') == 'none') {
+      //  $('.js-open-submenu').removeClass('active');
+        $('.menu-popup__submenu').fadeOut();
+        $submenu.fadeIn();
+    }   
+    //$submenu.addClass('active');
+}); 
+
+$('.js-open-submenu-mobile').on('click', function() {
+    $('#menu-links').fadeOut();
+
+    $submenu = $($(this).attr('href'));
+    $submenu.fadeIn();
+});
+
+$('.js-close-submenu').on('click', function() {
+    $('.menu-popup__submenu').fadeOut();
+    $('#menu-links').fadeIn();
+});
+
+$('.js-menu-popup').fancybox({
+    src  : '#menu-content',
+    btnTpl : {
+    smallBtn : '<div data-fancybox-close class="fancybox-close-small menu-close"><i class="icon-close"></i></div>'
+  }
+});
+
 jQuery(document).ready(function() {
     jQuery('.js-animate').addClass("hidden").viewportChecker({
         classToAdd: 'visible animated fadeInUp slow', // Class to add to the elements when they are visible
